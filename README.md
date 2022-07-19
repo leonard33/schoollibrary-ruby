@@ -10,7 +10,7 @@ This project is on building a aschool library app.
 To get a local copy up and running follow these simple example steps.
 
 - open your code editor.
-- type in terminal git clone then copy this link next to command line.
+- type in terminal git clone then copy this link in command: `https://github.com/leonard33/schoollibrary-ruby.git`.
 - run `bundle install`
 
 ## Authors
