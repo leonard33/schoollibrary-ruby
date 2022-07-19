@@ -1,29 +1,11 @@
 class Person
-  def initialize(name, age, _parent_permission = 'true')
+  def initialize(age, name = 'Unknown', parent_permission: true)
     @id = id
     @name = name
     @age = age
   end
 
-  def gets_id
-    @id
-  end
-
-  def gets_name
-    @name
-  end
-
-  def gets_age
-    @age
-  end
-
-  def sets_name(name)
-    @name = name
-  end
-
-  def sets_age(age)
-    @age = age
-  end
+  attr_accessor :name, :age, :parent_permission
 
   def can_use_service?
     @age >= 18 && @parent_permission == 'true'
