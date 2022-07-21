@@ -1,5 +1,6 @@
 require_relative 'namable'
 require_relative 'decorator'
+require_relative 'rental'
 
 class Person < Namable
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -14,6 +15,10 @@ class Person < Namable
 
   def can_use_service?
     of_age? || @parent_permission
+  end
+
+  def add_rental(person, date)
+    Rental.new(date, self, person)
   end
 
   private
