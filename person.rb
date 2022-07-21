@@ -1,7 +1,6 @@
 require_relative 'namable'
 require_relative 'decorator'
 
-
 class Person < Namable
   def initialize(age, name = 'Unknown', parent_permission: true)
     super()
@@ -25,8 +24,8 @@ class Person < Namable
 end
 
 person = Person.new(22, 'maximilianus')
-  person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  capitalizedTrimmedPerson.correct_name
+person.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+capitalized_person.correct_name
+capitalized_trimmedperson = TrimmerDecorator.new(capitalized_person)
+capitalized_trimmedperson.correct_name
