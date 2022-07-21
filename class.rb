@@ -1,4 +1,6 @@
 require_relative './student'
+require_relative './rental'
+require_relative './person'
 
 class Classroom
   attr_accessor :label
@@ -9,8 +11,7 @@ class Classroom
     @students = []
   end
 
-  def add_student(student)
-    @students.push(student)
-    student.classroom = self
+  def add_student(person, date)
+    Student.new(date, self, person)
   end
 end
